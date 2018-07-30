@@ -1,0 +1,215 @@
+/* Created by Miguel Jacobs */
+
+* {  
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.signIn, .btn-primary {
+  background-color: #00B7FF !important;
+}
+
+.container {
+  width: 100% !important;
+  background-color: black !important;
+}
+
+.navigation {
+  border-radius: 0 !important;
+}
+
+.navbar-inverse {
+  border-radius: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.jumbotron {
+  background-image: url(../images/jumbotron_bg.jpg) !important;
+  background-size: 45% 99% !important;
+  background-repeat: no-repeat !important;
+  background-color: black !important;
+  color: white !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+}
+
+.titling {
+  padding: 50px 20px;
+}
+
+div{
+  /* border: 1px dashed red; */
+}
+
+.date {
+  height: 150px;
+  padding: 0;
+  font-size: 2em;
+  text-align: right;
+}
+
+.content-body {
+  background-color: black;
+}
+
+.panel-heading {
+  height: auto;
+  text-align: center;
+  padding: 50px !important;
+  background-color: black !important;
+}
+
+.panel-heading .panel-title {
+  font-size: 2em;
+}
+
+#logo {
+  height: 100%;
+}
+
+.blogs {
+  padding-top: 40px;
+}
+
+.head_img{
+  height: 400px !important;
+  width: 100% !important;
+}
+
+picture {
+  height: 400px !important;
+}
+
+.blog_posts {
+  height: 1355px;
+}
+
+.panel-body {
+  padding: 50px 50px 0 !important;
+  line-height: 2em !important;
+}
+
+.halfContent {
+  height: 500px  !important;
+  overflow: hidden;
+}
+
+.panel-body>.fullContent {
+  height: 100%;
+}
+
+.readMore {
+  margin: 50px;
+  border: 1px solid #00B7FF;
+}
+
+.readMoreSection {
+  height: 150vh;
+}
+
+.edit {
+  margin: 50px !important;
+}
+
+.question {
+  padding: 40px;
+}
+
+.query_section {
+  height: 500px;
+  padding-top: 100px;
+}
+
+.post_blog {
+  height: 1100px !important;
+  padding: 150px 30px 30px !important;
+}
+
+.form_item {
+  padding: 20px 0;  
+}
+
+.btn-blog {
+  margin: 20px 0;
+}
+
+.goBack {
+  float: left !important;
+  margin-left: 20px !important;
+  border: 1px solid #00B7FF !important;
+}
+
+.summer {
+  padding: 30px !important;
+}
+
+/* Footer */
+.footer-basic {
+  padding:40px 0;
+  background-color:#ffffff;
+  color:#4b4c4d;
+}
+
+.copyright {
+  margin: 50px 20px;
+  font-size: 1.2em;
+  text-align: center !important;
+  color: #00B7FF;
+}
+
+@media only screen and (max-width: 2560px) {
+  .col-lg-4 {
+    /* text-align: right; */
+  }
+
+  .col-lg-4>h1 {    
+    font-size: 4em;
+  }
+  .col-lg-4>.btn {
+    font-size: .9em;
+  }
+  .post_blog {
+    padding: 150px 350px 30px !important;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .col-lg-4 {
+    text-align: right;
+  }
+
+  .col-lg-4>h1 {    
+    font-size: 1.5em;
+  }
+  .col-lg-4>.btn {
+    font-size: .5em;
+  }
+  .post_blog {
+    padding: 150px 250px 30px !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .post_blog {
+    padding: 150px 150px 30px !important;
+  }
+}
+
+@media only screen and (max-width: 320px) {  
+  .panel-heading {
+    text-align: left !important;
+  }
+  .post_blog {
+    padding: 150px 20px 30px !important;
+  }
+}

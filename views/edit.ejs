@@ -33,63 +33,69 @@
 
         <!-- Nav Partial -->
         <% include nav.ejs %>
+        
+        <div class="container">
+            <div class="row">
 
-        <div class="row">
+                <div class="row">
 
-            <div class="col-lg-12 post_blog">
+                    <div class="col-lg-12 post_blog">
 
-                <form method="POST">
-                    <div class="form-group form_item">
-                        <label for="Title">Title</label>
-                        <input id="title" name="title" type="text" class="form-control" placeholder="Title" value="<%= posts.title %>">
-                    </div>
-
-                    <div class="form-group form_item">
-                        <label for="Image">Image</label>
-                        <input id="image" name="image" type="text" class="form-control" placeholder="Add image url here..."  value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTenpNhWcRARen2Vz3DQHo4hUvQVFXDFI2s4oXuCEat-mkMnLgs">
-                    </div>                    
-                    
-                    <div class="form-group form_item">
-                        <label for="dateTime">Date / Time</label>
-                        <input id="dateTime" name="datetime" type="text" class="form-control" placeholder="Automatically Updated For You"  value="<%= currentDate %>">                    
-                    </div>
-                    
-                    <!-- Open Modal Button -->
-                    <button type="button" class="btn btn-primary btn-blog" data-toggle="modal" data-target="#displaySummer">Type Blog Here...</button>
-
-                    <!-- Modal -->
-                    <div id="displaySummer" class="modal fade" role="dialog">
-                        <div class="modal-dialog">
-
-                            <!-- Modal Content-->
-                            <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Blog Post</h4>
-                            </div>
-                            <div class="modal-body">
-                                <textarea name="content" id="summernote"><%- posts.content %></textarea>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
-                            </div>
+                        <form method="POST">
+                            <div class="form-group form_item">
+                                <label for="Title">Title</label>
+                                <input id="title" name="title" type="text" class="form-control" placeholder="Title" value="<%= posts.title %>">
                             </div>
 
-                        </div>
-                    </div>
+                            <div class="form-group form_item">
+                                <label for="Image">Image</label>
+                                <input id="image" name="image" type="text" class="form-control" placeholder="Add image url here..."  value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTenpNhWcRARen2Vz3DQHo4hUvQVFXDFI2s4oXuCEat-mkMnLgs">
+                            </div>                    
+                            
+                            <div class="form-group form_item">
+                                <label for="dateTime">Date / Time</label>
+                                <input id="dateTime" name="datetime" type="text" class="form-control" placeholder="Automatically Updated For You"  value="<%= currentDate %>">                    
+                            </div>
+                                
+                            <!-- Open Modal Button -->
+                            <button type="button" class="btn btn-primary btn-blog" data-toggle="modal" data-target="#displaySummer">Type Blog Here...</button>
 
-                    <div class="form-group form_item">
-                        <label for="Author">Author</label>
-                        <input id="author" name="author" type="text" class="form-control" placeholder="Author" value="<%= posts.author %>">
-                    </div>
+                            <!-- Modal -->
+                            <div id="displaySummer" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
 
-                    <button type="submit" class="btn btn-primary">Update</button>
-                </form>
+                                    <!-- Modal Content-->
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Blog Post</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <textarea name="content" id="summernote"><%- posts.content %></textarea>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                                    </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group form_item">
+                                <label for="Author">Author</label>
+                                <input id="author" name="author" type="text" class="form-control" placeholder="Author" value="<%= posts.author %>">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Update</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
 
-    <!-- Footer Partial -->
-    <% include footer.ejs %>
+        <!-- Footer Partial -->
+        <% include footer.ejs %>
+    </div>
 
     <script type="text/javascript">
         $(document).ready(function() {

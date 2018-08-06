@@ -1,9 +1,179 @@
 /* Created by Miguel Jacobs */
 
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
 * {  
   margin: 0;
   padding: 0;
+  font-family: 'Raleway', sans-serif;
 }
+
+/* Login Page */
+.login-dark {
+  height: 800px;
+  /* background: #475d62 url(); */
+  background: linear-gradient(to top,
+  black,
+  black 10%,
+  #1e2833 90%,
+  #1e2833) 100%;
+  background-size: cover;
+  position: relative;
+}
+
+.login-dark form {
+  max-width: 320px;
+  width: 90%;
+  background-color: #1e2833;
+  padding: 40px;
+  border-radius: 4px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  box-shadow: 3px 3px 4px rgba(0,0,0,0.2);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.icon {
+  font-size: 45px !important;
+}
+
+.h2, h2 {
+  font-size: 30px;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 500;
+  line-height: 1.1;
+  color:inherit;
+}
+
+.login-dark .illustration {
+  text-align: center;
+  padding: 15px 0 20px;
+  font-size: 100px;
+  color: #2980ef;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.login-dark form .form-control {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #434a52;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  color: inherit;
+}
+
+/* Button */
+.login-dark form .btn-primary:active {
+  transform: translateY(1px);
+}
+
+.login-dark form .btn-primary:hover, .btn-primary:active {
+  background: #214a80;
+  outline: none;
+}
+
+.btn-primary {
+  background-image: -webkit-linear-gradient(top, #337ab7 0, #265a88 100%);
+  background-image: -webkit-linear-gradient(linear, left top, left bottom, from(#337ab7), to(#265a88));
+  background-image: -webkit-linear-gradient(to bottom, #337ab7 0, #265a88 100%);
+}
+
+.btn-primary {
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.2);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.75);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.75);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+/* login link */
+.login-dark form .login:hover, .login-dark form .login:active {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.login-dark form .login, .login-dark form .account {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #6f7a85;
+  opacity: .9;
+  text-decoration: none;  
+  text-shadow: 0 -2px 0 rgba(0,0,0,0.6);
+}
+
+.login-dark form center {
+  color: white;
+}
+
+a:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+a:focus, a:hover {
+  color: #23527c;
+  text-decoration: underline;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+a {
+  color: #337ab7;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+/* End of Login Page */
 
 body {
   padding: 0;
@@ -16,6 +186,11 @@ a {
 
 .signIn, .btn-primary {
   background-color: #00B7FF !important;
+  border-right: 1px solid black;
+}
+
+.logout {
+  display: none !important;
 }
 
 .container {
@@ -33,18 +208,53 @@ a {
   padding: 0 !important;
 }
 
+#signUpBtn {
+  position: absolute;
+  right: 0;
+  width: 80px;
+  height: 100%;
+  background-color: red;
+  text-align: center;
+  line-height: 350%;
+  border-left: 1px solid black;
+  color: black;
+  text-decoration: none;  
+}
+
+#signUpBtn:hover {
+  color: white;
+}
+
 .jumbotron {
-  background-image: url(../images/jumbotron_bg.jpg) !important;
-  background-size: 45% 99% !important;
+  width: 100%;
+  height: 95vh;
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, 
+  rgba(0, 0, 0, .55) 70%, 
+  black 100%), 
+  url(https://stmed.net/sites/default/files/mass-effect%3A-andromeda-hd-wallpapers-33351-9834601.jpg) !important;
+  background-size: cover !important;
   background-repeat: no-repeat !important;
-  background-color: black !important;
+  background-position: center !important;
   color: white !important;
   border-radius: 0 !important;
   margin: 0 !important;
 }
 
+.header {
+  position: relative !important;
+  top: 200px !important;
+}
+
+center {  
+  font-size: 12px;
+  color: #6f7a85;
+  opacity: .9;  
+}
+
 .titling {
   padding: 50px 20px;
+  color: white;
+  text-shadow: inset 10px red !important;
 }
 
 div{
@@ -59,7 +269,12 @@ div{
 }
 
 .content-body {
-  background-color: black;
+  height: 1800px;
+  background: linear-gradient(to top,
+  black,
+  black 10%,
+  #1e2833 90%,
+  #1e283300) 100%;
 }
 
 .panel-heading {
@@ -78,7 +293,7 @@ div{
 }
 
 .blogs {
-  padding-top: 40px;
+  padding: 2px;
 }
 
 .head_img{
@@ -114,7 +329,6 @@ picture {
 }
 
 .readMoreSection {
-  height: 150vh;
 }
 
 .edit {
@@ -126,8 +340,17 @@ picture {
 }
 
 .query_section {
-  height: 500px;
+  height: 750px;
+  background: linear-gradient(to top,
+  black,
+  black 10%,
+  #1e2833 90%,
+  #1e283300) 100%;
   padding-top: 100px;
+}
+
+.delete_section {
+  height: 750px;
 }
 
 .post_blog {
@@ -168,10 +391,6 @@ picture {
 }
 
 @media only screen and (max-width: 2560px) {
-  .col-lg-4 {
-    /* text-align: right; */
-  }
-
   .col-lg-4>h1 {    
     font-size: 4em;
   }
@@ -184,6 +403,9 @@ picture {
 }
 
 @media only screen and (max-width: 1200px) {
+  .blogs {
+    background-color: black;
+  }
   .col-lg-4 {
     text-align: right;
   }
@@ -200,12 +422,18 @@ picture {
 }
 
 @media only screen and (max-width: 768px) {
+  .blogs {
+    background-color: black;
+  }
   .post_blog {
     padding: 150px 150px 30px !important;
   }
 }
 
-@media only screen and (max-width: 320px) {  
+@media only screen and (max-width: 320px) {
+  .blogs {
+    background-color: black;
+  }
   .panel-heading {
     text-align: left !important;
   }

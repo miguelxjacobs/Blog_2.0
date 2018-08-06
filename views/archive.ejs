@@ -29,21 +29,6 @@
         <!-- Nav Partial -->
         <% include nav.ejs %>
 
-        <div class="row">
-            <!-- Main heading -->
-            <div class="jumbotron">
-                <!-- wrapper in jumbotron -->
-                <div class="heading row">
-                    <div class="col-lg-8"></div>
-                    <div class="col-lg-4">
-                        <h1>miguelxjacobs{</h1>
-                        <a class="btn btn-primary" href="/archive">View Archive</a>            
-                        <a class="btn btn-primary" href="/new">Get Blogging</a>
-                    </div>                   
-                </div>
-            </div>
-        </div>
-
         <div class="row content-body">
             <div class="titling">
                 <center>
@@ -56,41 +41,46 @@
 
                 <% post.forEach(function(post) { %>
 
-                    <div class="col-lg-4 blogs">
-                        <div class="panel panel-primary blog_posts">                    
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><%= post.title %></h3>
+                                
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-lg-4 blogs">
+                                <div class="panel panel-primary blog_posts">                    
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title"><%= post.title %></h3>
+                                    </div>
+
+                                    <picture>
+                                        <img class="head_img img-fluid" src="<%= post.image %>" class="img-fluid" alt="Responsive image">
+                                    </picture>
+                            
+                                    <div class="date panel-body">                    
+                                        <%= post.date %>
+                                    </div>
+                            
+                                    <div class="panel-body halfContent">                    
+                                        <%- post.content %>
+                                    </div>
+
+                                    <a class="btn readMore" href="/more/<%= post.id %>">Read More</a>
+                            
+                                    <div class="panel-footer">Author: <%= post.author %></div>
+                                </div>
                             </div>
 
-                            <picture>
-                                <img class="head_img img-fluid" src="<%= post.image %>" class="img-fluid" alt="Responsive image">
-                            </picture>
-                    
-                            <div class="date panel-body">                    
-                                <%= post.date %>
-                            </div>
-                    
-                            <div class="panel-body halfContent">                    
-                                <%- post.content %>
-                            </div>
+                        <% }); %>
 
-                            <a class="btn readMore" href="/more/<%= post.id %>">Read More</a>
-                    
-                            <div class="panel-footer">Author: <%= post.author %></div>
-                        </div>
-                    </div>
+                    <% } else { %>
 
-                <% }); %>
-
-            <% } else { %>
-
-                    <h2>You have no blog posts</h2>
-            <% } %>
+                            <h2>You have no blog posts</h2>
+                    <% } %>
+                </div>
+            </div>
         </div>
 
         <!-- Nav Partial -->
         <% include footer.ejs %>
-        </div>
     </div>
 </body>
 </html>

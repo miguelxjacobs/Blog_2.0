@@ -20,6 +20,68 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="/stylesheets/style.css">
+    
+    <style>
+        .newsletter-subscribe {
+            color: #313437;
+            padding: 10px 0;
+        }
+
+        .newsletter-subscribe .intro {
+            font-size: 16px;
+            max-width: 500px;
+            margin: 0 auto 25px;
+        }
+
+        .newsletter-subscribe h2 {
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1.5;
+            padding-top: 0;
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: inherit;
+        }
+
+        .newsletter-subscribe .intro p {
+            margin-bottom: 35px;
+            color: #7d8285;
+            line-height: 1.5;
+        }
+
+        .text-center, .newsletter-subscribe form {
+            text-align: center;
+        }
+
+        p {
+            margin: 0 0 10px;
+        }
+
+        .newsletter-subscribe form .form-control {
+            background: #eff1f4;
+            border: none;
+            border-radius: 3px;
+            box-shadow: none;
+            outline: none;
+            color: inherit;
+            text-indent: 9px;
+            height: 45px;
+            margin-right: 10px;
+            min-width: 250px;
+        } 
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .container {
+            width: 750px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 </head>
 <body>
 
@@ -34,8 +96,8 @@
             <div class="jumbotron">
                 <!-- wrapper in jumbotron -->
                 <div class="heading row">
-                    <div class="col-lg-8"></div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-9 header">
                         <h1>miguelxjacobs{</h1>
                         <a class="btn btn-primary" href="/archive">View Archive</a>            
                         <a class="btn btn-primary" href="/new">Get Blogging</a>
@@ -55,42 +117,68 @@
             <% if (post) { %>
 
                 <% for(let i = 0; i < 3; i++) { %>
+                    <div class="container">
+                        <div class="row">
 
-                    <div class="col-lg-4 blogs">
-                        <div class="panel panel-primary blog_posts">                    
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><%= post[i].title %></h3>
+                            <div class="col-lg-4 blogs">
+                                <div class="panel panel-primary blog_posts">                    
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title"><%= post[i].title %></h3>
+                                    </div>
+
+                                    <picture>
+                                        <img class="head_img img-fluid" src="<%= post[i].image %>" class="img-fluid" alt="Responsive image">
+                                    </picture>
+                            
+                                    <div class="date panel-body">                    
+                                        <%= post[i].date %>
+                                    </div>
+                            
+                                    <div class="panel-body halfContent">                    
+                                        <%- post[i].content %>
+                                    </div>
+
+                                    <a class="btn readMore" href="/more/<%= post[i].id %>">Read More</a>
+                            
+                                    <div class="panel-footer">Author: <%= post[i].author %></div>
+                                </div>
                             </div>
 
-                            <picture>
-                                <img class="head_img img-fluid" src="<%= post[i].image %>" class="img-fluid" alt="Responsive image">
-                            </picture>
-                    
-                            <div class="date panel-body">                    
-                                <%= post[i].date %>
-                            </div>
-                    
-                            <div class="panel-body halfContent">                    
-                                <%- post[i].content %>
-                            </div>
+                        <% }; %>
 
-                            <a class="btn readMore" href="/more/<%= post[i].id %>">Read More</a>
-                    
-                            <div class="panel-footer">Author: <%= post[i].author %></div>
+                    <% } else { %>
+
+                            <h2>You have no blog posts</h2>
+                    <% } %>
+                </div>
+
+                <div class="newsletter-subscribe">
+                    <div class="container">
+                        <div class="intro">
+                            <h2 class="text-center">
+                                Subscribe For My Newsletter
+                            </h2>
+                            <p class="text-center">
+                                Stay up to date with the latest of my favourites by simply subscribing to my blog.
+                            </p>
                         </div>
+                        <form method="POST" class="form-inline">
+                            <div class="form-group">
+                                <input type="text" class="form-control" type="email" name="email" placeholder="Enter Your Email">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary" type="submit">Subscribe</button>
+                            </div>
+                        </form>
                     </div>
-
-                <% }; %>
-
-            <% } else { %>
-
-                    <h2>You have no blog posts</h2>
-            <% } %>
+                </div>
+            </div>
         </div>
 
         <!-- Nav Partial -->
         <% include footer.ejs %>
-        </div>
     </div>
+    
+    <script src="../javascripts/signOut.js"></script>
 </body>
 </html>

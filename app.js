@@ -8,6 +8,43 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+
+// Views
+let routes = [
+  require('./routes/index'),
+  require('./routes/archive'),
+  require('./routes/delete'),
+  require('./routes/edit'),
+  require('./routes/more'),
+  require('./routes/new'),
+  require('./routes/signIn'),
+  require('./routes/signUp'),
+  require('./routes/users')
+];
+
+// Linking database
+app.locals.Posts = require('./db.json');
+
+// SignIn page
+app.locals.userID = "";
+app.locals.user = "";
+
+// Enable changes for logged in users ONLY
+app.locals.signedIn = false;
+app.locals.signedError = "";
+app.locals.registeredError = "";
+
+let Users = 0;
+
+for(let i = 0; i < Users.length; i++) {
+  if(Users[i].loggedIn == true) {
+
+    app.locals.userID = Users[i].id;
+    app.locals.user = Users[i].client;
+    app.locals.signedIn = true;
+  }
+}
+
 // /* CHANGED DEFAULT PORT */
 // app.listen(8000);
 
@@ -21,8 +58,20 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+/************ DEFAULT ************/
+// app.use('/', indexRouter);
+// app.use('/users', usersRouter);
+
+// Custom routes
+app.use('/', routes[0]);
+app.use('/archive', routes[1]);
+app.use('/delete', routes[2]);
+app.use('/edit', routes[3]);
+app.use('/more', routes[4]);
+app.use('/new', routes[5]);
+app.use('/signIn', routes[6]);
+app.use('/signUp', routes[7]);
+app.use('/users', routes[8]);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

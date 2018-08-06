@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="icon" href="/images/logo.png">
+
+    <title><%= title %></title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+
+    <!-- Bootstrap Container -->
+    <div class="container">
+
+        <div class="row">
+           <!-- Main heading -->
+           <div class="login-dark">
+               <form method="POST">
+                   <h2 class="sr-only">Sign Up Form</h2>
+                   <div class="illustration">
+                       <!-- Acting icon placeholder -->
+                       <span class="icon ion-ios-locked-outline">Register</span>
+                   </div>
+                   <div class="form-group">
+                       <input type="text" name="client"  class="form-control" placeholder="Username">
+                   </div>
+                   <div class="form-group">
+                       <input type="email" name="email"  class="form-control" placeholder="Email">
+                   </div>
+                   <div class="form-group">
+                       <input type="password" name="credentials" class="form-control" placeholder="Password">
+                   </div>
+                   <div class="form-group">
+                       <button class="btn btn-primary btn-block" type="submit">Register</button>
+                    </div>
+                    <center>Already have an account?</center>
+                    <a href="/signIn" class="login">Log In</a>
+               </form>
+           </div>        
+        </div>
+
+        <!-- Footer Partial -->
+        <% include footer.ejs %>
+        </div>
+    </div>
+</body>
+</html>

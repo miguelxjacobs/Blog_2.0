@@ -19,7 +19,7 @@
     {
       "id": 3,
       "title": "DoTA 2",
-      "image": "https://i.ytimg.com/vi/JGtpHjdw0yk/maxresdefault.jpg",
+      "image": "https://s2-ssl.dmcdn.net/KY5_G/x720-A5K.jpg",
       "date": "2018/07/18",
       "content": "Dota 2 is a multiplayer online battle arena (MOBA) video game in which two teams of five players compete to collectively destroy a large structure defended by the opposing team known as the 'Ancient', whilst defending their own.[1][2] As in Defense of the Ancients, the game is controlled using standard real-time strategy controls, and is presented on a single map in a three-dimensional isometric perspective.[1][3] Ten players each control one of the game's 115 playable characters, known as 'heroes', with each having their own design, strengths, and weaknesses.[1][2][4] Heroes are divided into two primary roles, known as the 'carry' and 'support'.[5] Carries, which are also called 'cores', begin each match as weak and vulnerable, but are able to become more powerful later in the game, thus becoming able to 'carry' their team to victory.[6][5] Supports generally lack abilities that deal heavy damage, instead having ones with more functionality and utility that provide assistance for their carries.[7][5] Players select their hero during a pre-game drafting phase, where they can also discuss potential strategies and hero matchups with their teammates.[2][5] Heroes can not be switched mid-game, and once one is selected, they are removed from the drafting pool and become unavailable for all other players. All heroes have a basic damage-dealing attack, in addition to powerful abilities. Each hero has at least four abilities, all of which are unique, which are the primary method of fighting.[3][7] Heroes begin each game with an experience level of one, only having access to one of their abilities, but are able to level up and become more powerful during the course of the game, up to a maximum level of 25.[2][5] Whenever a hero gains an experience level, the player is able to unlock another of their abilities or improve one already learned.[2][5] The most powerful ability for each hero is known as their 'ultimate', which requires them to have an experience level of six in order to use. In order to prevent abilities from being used without consequence, a magic system in the game exists. Activating an ability costs a hero some of their 'mana points', which slowly regenerates over time.[3][8] Using an ability will also cause it to enter a cooldown phase, in which the ability can not be used again until a timer counts down to zero. All heroes have three attributes: strength, intelligence, and agility, which affect health points, mana points, and attack speed, respectively.[5] Each hero has one primary attribute out of the three, which adds to their non-ability basic damage output when increased.[9][5] Heroes also have an ability augmentation system known as 'Talent Trees', which allow players further choices on how to develop their hero.[10][5] If a hero runs out of health points and dies, they are removed from active play until a respawn timer counts down to zero, where they are then respawned in their base.[11]",
       "author": "Miguel Jacobs"
@@ -47,6 +47,42 @@
       "content": "Mass Effect: Andromeda begins in 2185, between the events of Mass Effect 2 and Mass Effect 3.[39][40] The four Citadel Council races and the Quarians are planning to populate new home worlds in the Andromeda Galaxy as part of a strategy called the Andromeda Initiative.[41] Each race sends 20,000 citizens on a one-way, 600-year journey to Andromeda aboard their own transportation vessel, called an Ark, and selects a leader, known as a Pathfinder. Once the races arrive, they help build the Nexus, a space station that serves as a center of government and diplomacy, a living area, as well as a base of operations for the Pathfinders.[42] The protagonist of Mass Effect: Andromeda is, depending on player choice, either Scott or Sara Ryder (voiced by Tom Taylorson or Fryda Wolff, respectively). Their father, Alec Ryder (Clancy Brown), is humanity's Pathfinder, tasked with finding a new home for the species.[37] Squadmates in the game include Alec's second-in-command, Cora Harper (Jules de Jongh), a biotic specialist with intensive commando training; Liam Kosta (Gary Carr), a security expert who specializes in crisis response; Pelessaria 'Peebee' B'Sayle (Christine Lakin), an asari gunslinger capable of biotic destabilization; Nakmor Drack (Stanley Townsend), a veteran krogan warrior of the Nakmor clan specializing in close combat; Vetra Nyx (Danielle Rayne), a female turian mercenary who excels in shielding and protection; and Jaal Ama Darav (Nyasha Hatendi), a resistance fighter of the newly introduced angara race.[43] Ryder's crewmates include Kallo Jath (Garett Ross), a salarian pilot; Suvi Anwar (Katy Townsend), a human science officer; Gil Brodie (Gethin Anthony,[44]), a human mechanic; Lexi T'Perro (Natalie Dormer), an asari medical doctor;[45] and SAM (Alexia Traverse-Healy), an artificial intelligence that can communicate with all members of the team via implants.[46]",
       "author": "Miguel Jacobs",
       "id": 6
+    }
+  ],
+  "Users": [
+    {
+      "id": 1,
+      "client": "miguelxjacobs",
+      "email": "miguel.jacobs@hotmail.com",
+      "credentials": "password",
+      "loggedIn": false
+    },
+    {
+      "client": "one",
+      "email": "one@mail.com",
+      "credentials": "123",
+      "loggedIn": false,
+      "id": 2
+    },
+    {
+      "client": "two",
+      "email": "two@mail.com",
+      "credentials": "12345",
+      "loggedIn": false,
+      "id": 3
+    },
+    {
+      "client": "orin",
+      "email": "orin@mail.com",
+      "credentials": "1234",
+      "loggedIn": false,
+      "id": 4
+    }
+  ],
+  "Subscribers": [
+    {
+      "id": 1,
+      "email": "miguel.jacobs@hotmail.com"
     }
   ]
 }

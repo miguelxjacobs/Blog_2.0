@@ -328,9 +328,6 @@ picture {
   border: 1px solid #00B7FF;
 }
 
-.readMoreSection {
-}
-
 .edit {
   margin: 50px !important;
 }
@@ -422,6 +419,13 @@ picture {
 }
 
 @media only screen and (max-width: 768px) {
+  #signUpBtn {
+    width: 100% !important;
+    height: 42px !important;
+    text-align: left !important;
+    padding-left: 14px !important;
+    margin-top: -7px !important;
+  }
   .blogs {
     background-color: black;
   }

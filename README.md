@@ -4,4 +4,4 @@ To initialize use:
 
 > nodemon start
 
-> json-server --watch db.json --port 8000
+> json-server --watch db.json --port 3000
